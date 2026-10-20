@@ -15,7 +15,8 @@ public class GameScore {
 
         System.out.print(tokens[0] + "\n" + tokens[1]);
 
-
+        String[] location = tokens[0].split(Pattern.quote(":"));
+        System.out.print(location[0] + "\n" + location[1]);
         // Home:Visitor|21:9
         // print the team with the higher score
     }
