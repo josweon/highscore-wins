@@ -13,10 +13,20 @@ public class GameScore {
         String input = scanner.nextLine();
         String[] tokens = input.split(Pattern.quote("|"));
 
-        System.out.print(tokens[0] + "\n" + tokens[1]);
+        System.out.println(tokens[0] + "\n" + tokens[1]);
 
         String[] location = tokens[0].split(Pattern.quote(":"));
-        System.out.print(location[0] + "\n" + location[1]);
+        System.out.println(location[0] + "\n" + location[1]);
+
+        String[] stringScore = tokens[1].split(Pattern.quote(":"));
+
+        int score1 = Integer.parseInt(stringScore[0]);
+        int score2 = Integer.parseInt(stringScore[1]);
+
+        System.out.println(score1 + " " + score2);
+
+
+
         // Home:Visitor|21:9
         // print the team with the higher score
     }
