@@ -9,25 +9,26 @@ public class GameScore {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Please enter the game score: ");
-
         String input = scanner.nextLine();
+
         String[] tokens = input.split(Pattern.quote("|"));
 
-        System.out.println(tokens[0] + "\n" + tokens[1]);
-
         String[] location = tokens[0].split(Pattern.quote(":"));
-        System.out.println(location[0] + "\n" + location[1]);
 
         String[] stringScore = tokens[1].split(Pattern.quote(":"));
 
         int score1 = Integer.parseInt(stringScore[0]);
         int score2 = Integer.parseInt(stringScore[1]);
 
-        System.out.println(score1 + " " + score2);
+        String winner;
+        if (score1 == score2) {
+            winner = "Tie!";
+        } else if (score1 > score2) {
+            winner = location[0];
+        } else {
+            winner = location[1];
+        }
 
-
-
-        // Home:Visitor|21:9
-        // print the team with the higher score
+        System.out.printf("Winner: %s", winner);
     }
 }
